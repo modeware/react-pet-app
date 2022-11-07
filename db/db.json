@@ -1,0 +1,19 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "name": "Scooby",
+      "type": "Dog"
+    },
+    {
+      "id": 2,
+      "name": "Luna",
+      "type": "Dog"
+    },
+    {
+      "name": "Macy",
+      "type": "Cat",
+      "id": 3
+    }
+  ]
+}

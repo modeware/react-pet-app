@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Navigation/Nav';
+import { Box } from '@chakra-ui/react';
+import PetsTablePage from './pages/PetsTablePage/PetsTablePage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Overview from './pages/Overview/Overview';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Box h="100vh" className="App">
+        
+        <Nav text="PETS"/>
+        <Routes>
+          <Route path="/overview" element={<Overview/>}/>
+          <Route path="/" element={<PetsTablePage/>}/>
+        </Routes>
+      </Box>
+    </BrowserRouter>
   );
 }
 
